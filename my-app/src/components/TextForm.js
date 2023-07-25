@@ -46,7 +46,15 @@ export default function TextForm(props) {
                 // baba("arreh op bolo");
             console.log("uppercase was clicked "+ text);
             
-            let newext= text.toUpperCase();
+            let newext=text.toUpperCase();
+
+              setText(newext);
+        }
+        const handleUpClick2=()=>{
+                // baba("arreh op bolo");
+            console.log("Lowercase was clicked "+ text);
+            
+            let newext=text.toLowerCase();
 
               setText(newext);
         }
@@ -56,14 +64,26 @@ export default function TextForm(props) {
             
         }
   return (
-    <div>
+     <>
+     <div className="container">
         
         <div className="mb-3">
         <label htmlFor="myBox" className="form-label">{props.heading}</label>
         <textarea className="form-control" id="myBox" onChange={handleOnChange} value={text} rows="8"></textarea>
       </div>
-      <button className="btn btn-primary" onClick={handleUpClick} >Convert To Uppercase</button>
+      <button className="btn btn-primary " onClick={handleUpClick} >Convert To Uppercase</button>
+      <button className="btn btn-primary mx-2" onClick={handleUpClick2} >Convert To Lowercase</button>
     </div>
+    <div className="container my-3">
+        <h1>Your Text Summary</h1>
+        <p>{text.split(" ").length} words and {text.length} characters</p>
+        <p>{0.008*(text.split(" ").length)} minutes it will take to read this..</p>
+        <h2>Preview</h2>
+        <p>{text}</p>
+    </div>
+
+     </>
+    
   )
 }
 
