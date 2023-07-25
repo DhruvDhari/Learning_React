@@ -36,16 +36,33 @@
 //             )
 // }
 
-import React from 'react'
+import React,{ useState } from 'react'
+
 
 export default function TextForm(props) {
+        const[text,setText]= useState("Enter text here...");
+        // setText("bhai");
+        const handleUpClick=()=>{
+                // baba("arreh op bolo");
+            console.log("uppercase was clicked "+ text);
+            
+            let newext= text.toUpperCase();
+
+              setText(newext);
+        }
+        const handleOnChange=(event)=>{
+            console.log("on change");
+            setText(event.target.value);
+            
+        }
   return (
     <div>
         
-        <div class="mb-3">
-        <label for="myBox" class="form-label">{props.heading}</label>
-        <textarea class="form-control" id="myBox" rows="8"></textarea>
+        <div className="mb-3">
+        <label htmlFor="myBox" className="form-label">{props.heading}</label>
+        <textarea className="form-control" id="myBox" onChange={handleOnChange} value={text} rows="8"></textarea>
       </div>
+      <button className="btn btn-primary" onClick={handleUpClick} >Convert To Uppercase</button>
     </div>
   )
 }

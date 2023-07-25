@@ -2,8 +2,8 @@
 import './App.css';
 import TextForm from './components/TextForm';
 import Navbar from './components/Navbar';
-let about=5;
-let name="Dhaki chiki website";
+let about="About";
+let name="Text Modifier Website";
 function App() {
   return (
     <>
