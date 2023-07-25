@@ -88,7 +88,7 @@ export default function Navbar(props) {
     </div>
   </div>
 </nav>
-      heyyy guysss, this is dd !!
+    
     </div>
   )
 }
