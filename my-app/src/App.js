@@ -1,15 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
-import TextForm from './components/TextForm';
+// import TextForm from './components/TextForm';
+import About from './components/About';
 import Navbar from './components/Navbar';
-let about="About";
+let aboutText="About";
 let name="Text Modifier Website";
 function App() {
   return (
     <>
-  <Navbar title={name} aboutText={about} />
+    
+  <Navbar title={name} aboutText={aboutText} />
   <div className="container my-5">
-  <TextForm heading="Enter the text to Analyse"/>
+  {/* <TextForm heading="Enter the text to Analyse"/> */}
+   <About/>
   </div>
   
     {/* <Navbar title='Capitalizer'/>
