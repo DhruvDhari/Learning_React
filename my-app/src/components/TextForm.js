@@ -47,14 +47,16 @@ export default function TextForm(props) {
             console.log("uppercase was clicked "+ text);
             
             let newext=text.toUpperCase();
-
+            props.showAlert("Converted to Uppercase !","success");
               setText(newext);
+              
         }
         const handleUpClick2=()=>{
                 // baba("arreh op bolo");
             console.log("Lowercase was clicked "+ text);
             
             let newext=text.toLowerCase();
+            props.showAlert("Converted to Lowercase !","success");
 
               setText(newext);
         }
