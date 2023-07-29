@@ -6,12 +6,11 @@ import React,{useState} from 'react'
 import Alert from './components/Alert';
 // import About from './components/About';
 
-//for react-router
+// for react-router
 // import{
 //   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
+//   Routes,
+//   Route
 // } from "react-router-dom";
 
 let aboutText="About";
@@ -52,27 +51,30 @@ function App() {
   }
 
   return (
-    <> 
+    <div>
+      {/* <Router>  */}
   <Navbar title={name} aboutText={aboutText} mode={mode} toggleMode={toggleMode} />
   <Alert alert={alert}/>
   <div className="container my-5">
   <TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>
-    {/* <Switch>
+    {/* <Routes>
       <Route  exact path='/about'>
-      <About/>
+      element={<About/>}
       </Route>
       <Route exact path='/'>
-      <TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>
+      element={<TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>}
       </Route>
-    </Switch> */}
- 
+    </Routes>
+  */}
   </div>
   
     {/* <Navbar title='Capitalizer'/>
     <div className='container'>
     <TextForm heading="Enter Text To Analyse"/>
     </div> */}
-    </>
+    {/* </Router> */}
+    </div>
+    
      );
 }
 
