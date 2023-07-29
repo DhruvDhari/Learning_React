@@ -39,6 +39,7 @@
 import React,{ useState } from 'react'
 
 
+
 export default function TextForm(props) {
         const[text,setText]= useState("Enter text here...");
         // setText("bhai");
@@ -67,16 +68,16 @@ export default function TextForm(props) {
         }
   return (
      <>
-     <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
+     <div className="container" style={{color:props.mode==='light'?'black':'white'}}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
         
-        <textarea style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'black'}} className="form-control" id="myBox" onChange={handleOnChange} value={text} rows="8"></textarea>
+        <textarea style={{backgroundColor:props.mode==='light'?'white':'black',color:props.mode==='light'?'black':'white'}} className="form-control" id="myBox" onChange={handleOnChange} value={text} rows="8"></textarea>
       </div>
       <button className="btn btn-primary " onClick={handleUpClick} >Convert To Uppercase</button>
       <button className="btn btn-primary mx-2" onClick={handleUpClick2} >Convert To Lowercase</button>
     </div>
-    <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
+    <div className="container my-3" style={{color:props.mode==='light'?'black':'white'}}>
         <h1>Your Text Summary</h1>
         <p>{text.split(" ").length} words and {text.length} characters</p>
         <p>{0.008*(text.split(" ").length)} minutes it will take to read this..</p>
