@@ -1,11 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
 import TextForm from './components/TextForm';
-// import About from './components/About';
 import Navbar from './components/Navbar';
 import React,{useState} from 'react'
 import Alert from './components/Alert';
+// import About from './components/About';
 
+//for react-router
+// import{
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 let aboutText="About";
 let name="Text Modifier Website";
@@ -50,7 +57,15 @@ function App() {
   <Alert alert={alert}/>
   <div className="container my-5">
   <TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>
-   {/* <About/> */}
+    {/* <Switch>
+      <Route  exact path='/about'>
+      <About/>
+      </Route>
+      <Route exact path='/'>
+      <TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>
+      </Route>
+    </Switch> */}
+ 
   </div>
   
     {/* <Navbar title='Capitalizer'/>
