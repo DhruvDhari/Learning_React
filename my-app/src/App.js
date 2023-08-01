@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       {/* <Router>  */}
   <Navbar title={name} aboutText={aboutText} mode={mode} toggleMode={toggleMode} />
   <Alert alert={alert}/>
@@ -59,13 +59,13 @@ function App() {
   <TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>
     {/* <Routes>
       <Route  exact path='/about'>
-      element={<About/>}
+      <About/>
       </Route>
       <Route exact path='/'>
-      element={<TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>}
+      <TextForm heading="Enter the text to Analyse" mode={mode} showAlert={showAlert}/>
       </Route>
-    </Routes>
-  */}
+    </Routes> */}
+ 
   </div>
   
     {/* <Navbar title='Capitalizer'/>
@@ -73,7 +73,8 @@ function App() {
     <TextForm heading="Enter Text To Analyse"/>
     </div> */}
     {/* </Router> */}
-    </div>
+    </>
+    
     
      );
 }
