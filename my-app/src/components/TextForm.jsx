@@ -41,6 +41,7 @@ import React,{ useState } from 'react'
 
 
 export default function TextForm(props) {
+
         const[text,setText]= useState("Enter text here...");
         // setText("bhai");
         const handleUpClick=()=>{
@@ -90,18 +91,18 @@ export default function TextForm(props) {
         
         <textarea style={{backgroundColor:props.mode==='light'?'white':'black',color:props.mode==='light'?'black':'white'}} className="form-control" id="myBox" onChange={handleOnChange} value={text} rows="8"></textarea>
       </div>
-      <button className="btn btn-primary m-2" onClick={handleUpClick} >Convert To Uppercase</button>
-      <button className="btn btn-primary m-2" onClick={handleUpClick2} >Convert To Lowercase</button>
-      <button className="btn btn-primary m-2" onClick={handleClearClick} >Clear Text</button>
-      <button className="btn btn-primary m-2" onClick={handleCopy} >Copy Text</button>
-      <button className="btn btn-primary m-2" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
+      <button disabled={text.length===0} className="btn btn-primary m-2" onClick={handleUpClick} >Convert To Uppercase</button>
+      <button disabled={text.length===0} className="btn btn-primary m-2" onClick={handleUpClick2} >Convert To Lowercase</button>
+      <button disabled={text.length===0} className="btn btn-primary m-2" onClick={handleClearClick} >Clear Text</button>
+      <button disabled={text.length===0} className="btn btn-primary m-2" onClick={handleCopy} >Copy Text</button>
+      <button disabled={text.length===0} className="btn btn-primary m-2" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
     </div>
     <div className="container my-3" style={{color:props.mode==='light'?'black':'white'}}>
         <h1>Your Text Summary</h1>
         <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
         <p>{0.008*(text.split(" ").filter((element)=>{return element.length!==0}).length)} minutes it will take to read this..</p>
         <h2>Preview</h2>
-        <p>{text.length>0?text:"Enter text to Preview"}</p>
+        <p>{text.length>0?text:"Nothing to Preview"}</p>
     </div>
 
      </>
