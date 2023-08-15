@@ -1,12 +1,14 @@
-// import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-  <>
-  
-  </>
-  );
-}
+import React, { Component } from 'react'
 
-export default App;
+export default class App extends Component {
+  name="dd";
+  render() {
+    return (
+      <div>
+        Hello my first class based component {this.name}
+      </div>
+    )
+  }
+}
