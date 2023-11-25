@@ -1,0 +1,8 @@
+~ssr
+server action
+~server side renderin gis better for public applications, reducing the no of api's to be called
+~ use server and use client..
+~disabling the js
+~revalidatepath
+~fully static routes, what does it effect when rendering is dynamic
+~client hydration.
